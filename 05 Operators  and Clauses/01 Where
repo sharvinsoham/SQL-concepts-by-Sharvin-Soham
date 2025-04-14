@@ -1,0 +1,24 @@
+-- Specifying a condition in the WHERE clause
+SELECT * FROM customers WHERE age > 30;
+-- Using logical operators AND and OR to combine conditions
+SELECT * FROM customers WHERE age < 18 OR age > 75;
+-- Combining multiple conditions using parentheses
+SELECT * FROM customers WHERE (age < 18) OR (age > 75);
+
+-- Group By and Having Clause
+SELECT department, COUNT(*) AS total_employees
+FROM employees GROUP BY department HAVING total_employees > 5;
+
+-- Group By and Having Clause
+SELECT PRODUCT_CODE, SUM(QUANTITY) AS TOTAL_QTY
+FROM SALES GROUP BY PRODUCT_CODE HAVING TOTAL_QTY > 100;
+
+-- Concatenating Strings using || operator
+SELECT 'Hello'||' World' AS greeting FROM DUAL; -- returns Hello World
+
+
+-- Group By and Having Clause for Aggregate Functions
+SELECT department, COUNT(*) AS NumberOfEmployees
+FROM Employees
+GROUP BY Department
+HAVING COUNT(*) > 5;
